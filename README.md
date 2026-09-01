@@ -1,4 +1,30 @@
 # Arduino-Anti-Drunk-Driving-System
 This prototype detects a driver's presence and monitors their breath for alcohol. If the driver is sober, an indicator light remains on to show the engine is unlocked. If alcohol is detected, the system triggers an alarm and turns the light off, simulating an engine kill-switch to prevent the car from starting.
 
-#Power Connections (Breadboard Setup)Before connecting the individual parts, it is best to set up a common power line on your breadboard so all components can share the Arduino's power.Connect the 5V pin on the Arduino to the Positive (+/Red) rail on the breadboard.Connect the GND pin on the Arduino to the Negative (-/Blue or Black) rail on the breadboard.Component Wiring TableHere is exactly where each pin from your components should connect to the Arduino Uno:ComponentComponent PinConnects to...MQ-3 Alcohol SensorVCCBreadboard Positive (+/5V)GNDBreadboard Negative (-/GND)A0 (Analog Out)Arduino Pin A0Ultrasonic Sensor (HC-SR04)VCCBreadboard Positive (+/5V)GNDBreadboard Negative (-/GND)TRIGArduino Pin 9ECHOArduino Pin 10Buzzer (Active)Positive (Longer leg / Red wire)Arduino Pin 11Negative (Shorter leg / Black wire)Breadboard Negative (-/GND)LED (Engine Indicator)Positive (Longer leg / Anode)Arduino Pin 2Negative (Shorter leg / Cathode)Connect to one end of a 220Ω resistor. Connect the other end of the resistor to Breadboard Negative (-/GND)
+## Circuit Connections
+
+### Power Supply (Breadboard Setup)
+To make wiring easier, set up a common power line on your breadboard:
+* Connect the **5V pin** on the Arduino to the **Positive (+)** rail on the breadboard.
+* Connect the **GND pin** on the Arduino to the **Negative (-)** rail on the breadboard.
+
+### MQ-3 Alcohol Sensor
+* **VCC:** Connect to Breadboard Positive (+)
+* **GND:** Connect to Breadboard Negative (-)
+* **A0 (Analog Out):** Connect to **Arduino Pin A0**
+
+### HC-SR04 Ultrasonic Sensor
+* **VCC:** Connect to Breadboard Positive (+)
+* **GND:** Connect to Breadboard Negative (-)
+* **TRIG:** Connect to **Arduino Pin 9**
+* **ECHO:** Connect to **Arduino Pin 10**
+
+### Buzzer
+* **Positive (Longer leg / Red wire):** Connect to **Arduino Pin 11**
+* **Negative (Shorter leg / Black wire):** Connect to Breadboard Negative (-)
+
+### LED (Engine Indicator)
+* **Positive (Longer leg / Anode):** Connect to **Arduino Pin 2**
+* **Negative (Shorter leg / Cathode):** Connect to one end of a **220Ω resistor**. Connect the other end of the resistor to Breadboard Negative (-)
+
+> **Note:** Always use a 220Ω or 330Ω resistor with the LED to prevent it from burning out.
